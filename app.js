@@ -7,7 +7,10 @@ app.use(express.static('public'))
 
 // 라우터 설정
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/public/main.html")
+    res.sendFile(__dirname + "/templates/main.html")
+})
+app.get('/join', (req, res) => {
+    res.sendFile(__dirname + "/templates/join.html")
 })
 
 // 서버실행: node app.js
